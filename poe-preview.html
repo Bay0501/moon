@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="zh-TW"><head><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>味聖素月餅訂單系統</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>味聖素月餅訂單系統</h1>
+        <form id="orderForm">
+            <label for="productName">品名：</label>
+            <select id="productName" required="">
+                <option value="">請選擇品名</option>
+            </select>
+
+            <label for="specification">規格：</label>
+            <select id="specification" required="">
+                <option value="">請選擇規格</option>
+            </select>
+
+            <label for="unitPrice">單價：</label>
+            <input type="text" id="unitPrice" readonly="">
+
+            <label for="quantity">數量：</label>
+            <input type="number" id="quantity" min="1" required="">
+
+            <label for="additional">追加：</label>
+            <input type="number" id="additional" min="0" value="0">
+
+            <label for="subtotal">小計：</label>
+            <input type="text" id="subtotal" readonly="">
+
+            <button type="button" id="addToCart">加入購物車</button>
+        </form>
+        <div id="cart">
+            <h2>購物車</h2>
+            <ul id="cartItems"></ul>
+            <p>總價: <span id="totalPrice">0</span></p>
+            <button id="submitOrder">提交訂單</button>
+        </div>
+    </div>
+    <div id="ordersDisplay"></div>
+    <script src="script.js"></script>
+
+
+</body></html>
